@@ -1,0 +1,314 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700;800&display=swap'); */
+
+#product-overview {
+    /* doing this all in a shorthand*/
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(10%, hsla(48, 63%, 19%, 0.6)), to(transparent)),
+        url('images/freedom.jpg') center/cover no-repeat border-box, hsl(340, 100%, 55%);
+    background: -o-linear-gradient(bottom, hsla(48, 63%, 19%, 0.6) 10%, transparent),
+        url('images/freedom.jpg') center/cover no-repeat border-box, hsl(340, 100%, 55%);
+    background: linear-gradient(to top, hsla(48, 63%, 19%, 0.6) 10%, transparent),
+        url('images/freedom.jpg') center/cover no-repeat border-box, hsl(340, 100%, 55%);
+
+    /* background-image: url('images/freedom.jpg'); */
+    /* cover is a setting that will ensure that your image always flls the entire container
+    it will even zoom in if your image is smaller than the container
+    so cover is the best setting if you want to ensure that there never is any whitespace anywhere in your container */
+    /* background-size: cover; */
+
+    /* contain will make sure that the image is fully displayed . it doesnt care if it shows whitespace
+    the image should be displayed as a whole*/
+
+    /* background-size: contain; */
+
+    /* 50% will be cropped on top bottom left and right if we use bg position center */
+    /* background-position: left 10% bottom 50%;
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    background-clip: border-box; */
+    /* background-attachment: fixed; */
+    /* using linear gradient */
+    /* background-image: linear-gradient(180deg, red,blue, green, yellow, orange, transparent); */
+
+    /* using radial gradient */
+    /* background-image: radial-gradient(circle 20px at 20% 50%,red, blue, green, yellow, pink); */
+    width: 100vw;
+    height: 33vh;
+    /* padding: 10px; */
+    /* margin-top: 3.5rem; */
+    position: relative;
+    /* border: 5px dashed red; */
+    /* border: 5px hsl(0, 0%, 0%) solid;
+    margin: 10px; */
+    /* padding: 20px; */
+    /* border-style: solid;
+    border-color: #000;
+    border-width: 5px; */
+    /* using shorthand . same as above */
+    /* border: 5px #000 solid;
+    margin: 20px; */
+
+}
+
+/* combinators. combinators have high specificity. this is not inheritance */
+#product-overview h1 {
+    color: hsl(0, 0%, 100%);
+    font-family: 'PT Sans',
+        sans-serif;
+    position: absolute;
+    bottom: 5%;
+    left: 3%;
+    font-size: 1.6rem;
+}
+
+@media (min-width: 40rem) and (min-height: 40rem) {
+
+    #product-overview {
+        height: 40vh;
+        background-position: 50% 25%;
+    }
+
+    #product-overview h1 {
+        font-size: 3rem;
+    }
+}
+
+.section-title {
+    color: hsl(120, 90%, 49%);
+    text-align: center;
+}
+
+.plan {
+    background-color: hsla(160, 55%, 84%, 0.87);
+    text-align: center;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    width: 100%;
+}
+
+.plan--highlighted {
+    background-color: hsl(120, 39%, 37%);
+    color: hsl(0, 0%, 100%);
+}
+
+.plan__annotation {
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(106, 67%, 33%);
+    -webkit-box-shadow: 2px 2px 2px 2px hsla(0, 10%, 20%, 0.5);
+    box-shadow: 2px 2px 2px 2px hsla(0, 10%, 20%, 0.5);
+    border-radius: 4px;
+    margin-left: 30%;
+    padding: 0.5rem;
+    width: 50%;
+}
+
+.plan__title {
+    color: hsl(199, 67%, 18%);
+}
+
+.plan__price {
+    color: hsl(317, 16%, 25%);
+}
+
+.plan--highlighted .plan__title {
+    color: hsl(0, 0%, 100%);
+}
+
+.plan__features {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.plan__feature {
+    margin: 0.5rem 0;
+}
+
+@media (min-width: 40rem) {
+
+    .plan__list {
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    .plan {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        width: 30%;
+        min-width: 13rem;
+        max-width: 25rem;
+        height: 28rem;
+    }
+
+    .plan__annotation {
+        max-width: 10rem;
+        min-width: 10rem;
+    }
+
+    .plan--highlighted {
+        -webkit-box-shadow: 2px 2px 2px 2px hsla(0, 10%, 20%, 0.5);
+        box-shadow: 2px 2px 2px 2px hsla(0, 10%, 20%, 0.5);
+        height: 30rem;
+        z-index: 50;
+    }
+}
+
+
+#key-features {
+    background-color: hsl(340, 100%, 55%);
+    margin-top: 5rem;
+    padding: 1rem;
+}
+
+#key-features>.section-title {
+    color: hsl(0, 0%, 100%);
+    margin: 2rem;
+
+}
+
+.key-feature__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.key-feature {
+    display: block;
+    /* width: 30%; */
+
+}
+
+/* .key-feature {
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+} */
+
+/* to get a perfect circle height and width should match */
+.key-feature__image {
+    background-color: hsl(340, 100%, 90%);
+    width: 128px;
+    border: 2px solid hsl(0, 0%, 26%);
+    border-radius: 50%;
+    height: 128px;
+    /* to center element horizontally margin auto */
+    margin: auto;
+    padding: 1.5rem;
+}
+
+.key-feature__description {
+    text-align: center;
+    font-weight: bold;
+    color: hsl(0, 0%, 100%);
+    font-size: 1.2rem;
+}
+
+@media (min-width: 40rem) {
+    .key-feature {
+        width: 30%;
+        max-width: 25rem;
+    }
+
+    .key-feature__list {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+}
+
+.modal {
+    position: fixed;
+    /* display: none; */
+    opacity: 0;
+    -webkit-transform: translateY(-3rem);
+    -ms-transform: translateY(-3rem);
+    transform: translateY(-3rem);
+    -webkit-transition: opacity 0.2s ease-out,
+        -webkit-transform 0.5s cubic-bezier(0.83, 0, 0.17, 1);
+    transition: opacity 0.2s ease-out,
+        -webkit-transform 0.5s cubic-bezier(0.83, 0, 0.17, 1);
+    -o-transition: opacity 0.2s ease-out,
+        transform 0.5s cubic-bezier(0.83, 0, 0.17, 1);
+    transition: opacity 0.2s ease-out,
+        transform 0.5s cubic-bezier(0.83, 0, 0.17, 1);
+    transition: opacity 0.2s ease-out,
+        transform 0.5s cubic-bezier(0.83, 0, 0.17, 1),
+        -webkit-transform 0.5s cubic-bezier(0.83, 0, 0.17, 1);
+    z-index: 200;
+    top: 20%;
+    left: 30%;
+    width: 40%;
+    background: hsl(0, 0%, 100%);
+    padding: 1rem;
+    border: 1px solid hsl(0, 0%, 80%);
+    -webkit-box-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.5);
+    box-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.5);
+}
+
+.modal__title {
+    text-align: center;
+    margin: 0 0 1rem 0;
+}
+
+.modal__actions {
+    text-align: center;
+}
+
+.modal__action {
+    border: 1px solid hsl(136, 70%, 18%);
+    background: hsl(136, 70%, 18%);
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+    font: inherit;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.modal__action:hover,
+.modal__action:active {
+    background: hsl(136, 74%, 53%);
+    border-color: hsl(136, 74%, 53%);
+}
+
+.modal__action--negative {
+    background: hsl(0, 100%, 50%);
+    border-color: hsl(0, 100%, 50%);
+}
+
+.modal__action--negative:hover,
+.modal__action--negative:active {
+    background: hsl(0, 100%, 66%);
+    border-color: hsl(0, 100%, 66%);
+}
+
+/* psuedo classes and elements */
+/* 
+.main-nav__item a::before {
+    content: ' (Nelson)';
+    color: red;
+
+} */
+
+/* p::first-letter{
+    color: red;
+    font-size: 30px;
+} */

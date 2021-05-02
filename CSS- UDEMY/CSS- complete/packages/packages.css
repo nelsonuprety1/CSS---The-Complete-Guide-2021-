@@ -1,0 +1,216 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+@font-face {
+    font-family: 'AnonymousPro';
+    src: url(/packages/anonymousPro-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'AnonymousPro';
+    src: url(/packages/anonymousPro-Bold.ttf) format('truetype');
+    font-weight: 700;
+}
+
+main {
+    padding-top: 2rem;
+}
+
+.background {
+    background: url('../images/plans-background.jpg') center/cover;
+    -webkit-filter: grayscale(40%);
+    filter: grayscale(40%);
+    width: 100vw;
+    height: 100vh;
+    /* by adding position fixed the element is taken out of the document flow
+    and therefore displayed above the existing elements*/
+    position: fixed;
+    /* -1 will make image go in background */
+    z-index: -1;
+}
+
+.section--packages1 {
+    background-color: rgb(149, 231, 231);
+    border: 5px solid hsl(118, 100%, 22%);
+    border-left: none;
+    height: 300px;
+    margin: 2.5rem 0 0.06rem;
+    width: 70%;
+    padding: 1.8rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.package__badge {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    margin: 0;
+    font-size: 0.8rem;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(0, 100%, 66%);
+    padding: 0.5rem;
+    -webkit-transform: rotateZ(45deg) translateX(3.5rem) translateY(-1rem);
+    -ms-transform: rotate(45deg) translateX(3.5rem) translateY(-1rem);
+    transform: rotateZ(45deg) translateX(3.5rem) translateY(-1rem);
+    /* same as above but shorthand */
+    /* transform: rotate(45deg) translate(3.5rem, -1rem); */
+    /* center is default */
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+    width: 12rem;
+    text-align: center;
+}
+
+.section--packages1:hover,
+.section--packages1:active {
+    border-color: hsl(0, 80%, 67%);
+}
+
+.first--link {
+    text-decoration: none;
+}
+
+.first--link .main--header__package1 {
+    color: hsl(0, 0%, 0%);
+}
+
+.first--link .second--header__package1 {
+    color: hsl(0, 0%, 50%);
+}
+
+.first--link .main-package__description1 {
+    background-color: #ffffff;
+    border: 1px solid green;
+    color: hsl(0, 0%, 0%);
+    font-size: 1.2rem;
+    padding: 15px;
+    font-family: 'AnonymousPro', sans-serif;
+    font-weight: 700;
+    line-height: 1;
+    /* shorthand */
+    /* font: 700 1.2rem 'AnonymousPro', sans-serif; */
+    /* text-decoration: underline wavy red; */
+    /* 2px is x axis and y axis 20px is blur */
+    /* text-shadow: 2px 2px 20px hsl(0, 30%, 55%); */
+}
+
+/* second */
+.section--packages2 {
+    background-color: rgb(219, 240, 240);
+    border: 5px solid hsl(118, 100%, 22%);
+    border-right: none;
+    height: 300px;
+    margin: 1.25rem 0 0.06rem;
+    width: 70%;
+    padding: 1.8rem;
+    float: right;
+    text-align: right;
+}
+
+.section--packages2:hover,
+.section--packages2:active {
+    border-color: hsl(0, 80%, 67%);
+}
+
+.first--link2 {
+    text-decoration: none;
+}
+
+.first--link2 .main--header__package2 {
+    color: hsl(0, 0%, 0%);
+}
+
+.first--link2 .second--header__package2 {
+    color: hsl(0, 0%, 50%);
+}
+
+.first--link2 .main-package__description2 {
+    background-color: #ffffff;
+    border: 1px solid green;
+    color: hsl(0, 0%, 0%);
+    font-size: 1.2rem;
+    padding: 15px;
+    font-family: 'AnonymousPro',
+        sans-serif;
+    font-weight: 700;
+    line-height: 1;
+    /* text-shadow: 2px 2px 20px hsl(0, 30%, 55%); */
+}
+
+/* clear floats on both sides, left and right
+This means any element coming after this element with that class will
+not respect previous floats. this is a hacky way of doing this.
+but nowadays using flexbox is better
+*/
+.clearfix {
+    clear: both;
+}
+
+/* third */
+.section--packages3 {
+    background-color: hsl(120, 40%, 23%);
+    border: 5px solid hsl(118, 100%, 22%);
+    border-left: none;
+    height: 300px;
+    margin: 1.25rem 0 0.06rem;
+    width: 70%;
+    padding: 1.8rem;
+}
+
+.section--packages3:hover,
+.section--packages3:active {
+    border-color: hsl(0, 80%, 67%);
+}
+
+.first--link3 {
+    text-decoration: none;
+}
+
+.first--link3 .main--header__package3 {
+    color: hsl(0, 0%, 100%);
+}
+
+.first--link3 .second--header__package3 {
+    color: hsl(0, 0%, 73%);
+}
+
+.first--link3 .main-package__description3 {
+    background-color: #ffffff;
+    border: 1px solid green;
+    color: hsl(0, 0%, 0%);
+    font-size: 1.2rem;
+    padding: 15px;
+    font-family: 'AnonymousPro',
+        sans-serif;
+    font-weight: 700;
+    line-height: 1;
+    /* text-shadow: 2px 2px 20px hsl(0, 30%, 55%); */
+}
+
+@media(min-width: 40rem) {
+    main {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1500px;
+    }
+}
+
+@media(min-width: 1500px) {
+    .section--packages1 {
+        border-left: 5px solid hsl(118, 100%, 22%);
+    }
+
+    .section--packages2 {
+        border-right: 5px solid hsl(118, 100%, 22%);
+    }
+
+    .section--packages3 {
+        border-left: 5px solid hsl(118, 100%, 22%);
+    }
+}

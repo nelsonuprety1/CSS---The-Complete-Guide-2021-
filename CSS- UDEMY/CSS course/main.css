@@ -1,0 +1,38 @@
+body {
+    font-family: sans-serif;
+}
+
+nav {
+    margin-bottom: 16px;
+    background: hsl(27, 95%, 61%);
+    padding: 8px 0;
+}
+
+a {
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+    margin: 10px;
+}
+
+a.active {
+    color: hsl(300, 100%, 25%);
+}
+
+/* use not with caution */
+a:not(.active){
+    color: hsl(240, 100%, 50%);
+}
+
+.main-section {
+    height: 800px;
+    border: 1px solid hsl(0, 0%, 80%);
+    padding: 16px;
+     /* if we write !important then the below highligted selector
+    with border property wont be executed */
+     /* border: 1px solid hsl(0, 0%, 80%) !important; */
+}
+
+.highlighted {
+    border: 2px solid hsl(27, 95%, 61%);
+
+}

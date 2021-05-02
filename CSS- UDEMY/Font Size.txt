@@ -1,0 +1,12 @@
+root em - rem
+rem is a unit that refers to the font-size
+
+em 
+em also refers to the font size 
+
+But important difference between these two units
+
+
+viewport height (vh)
+
+viewport width (vw)
